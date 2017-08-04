@@ -4,18 +4,18 @@ import Control.Monad.Eff (Eff)
 import Control.Monad.Eff.Console (CONSOLE, log)
 
 import Prelude hiding (id)
--- import Data.List (List(..), (:))
+import Data.List (List(..), (:))
 
--- import Data.Types (Person(..), greet, printGreets, fighterGreet)
--- import Data.PatternMatching (someString, id, sum, sum', listSum, getFullName, getFullName')
--- import Data.FFI (handleParseFloat)
--- import Data.Records (whoAmI, showMe, whoIsRocky, showRocky, updateFighterWeightClass)
+import Data.Types (Person(..), greet, printGreets, fighterGreet)
+import Data.PatternMatching (someString, id, sum, sum', listSum, getFullName, getFullName')
+import Data.FFI (handleParseFloat)
+import Data.Records (whoAmI, showMe, whoIsRocky, showRocky, updateFighterWeightClass)
 
 
-main :: ∀ e. Eff (console :: CONSOLE | e) Unit
+main :: forall e. Eff (console :: CONSOLE | e) Unit
 main = do
   log "Hello, sailor"
-  {-
+  
   log "Print Adrian using"
   log $ greet ADRIAN <> "!"
   
@@ -55,5 +55,5 @@ main = do
   log $ showMe whoAmI
   log $ showRocky whoIsRocky
   log $ updateFighterWeightClass "heavyweight" whoIsRocky
-  -}
+
   
